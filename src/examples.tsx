@@ -2,10 +2,11 @@
 // `remotion preview src/index.tsx` and click any comp to play it.
 import React from "react";
 import { AbsoluteFill } from "remotion";
-import { GlobalCss, Bg } from "./primitives";
-import { C, W, H } from "./theme";
+import { GlobalCss, Bg, Line } from "./primitives";
+import { C, W, H, FONT_SANS, FONT_SERIF } from "./theme";
 import { StepIndicator, PillBadge, HeadlinePair, SpeechBubble, PriceTag, BlurBgWord, NextButton, RingCircles, ConnectorAnnotation, NotificationCard, DebitCard, PuzzlePair, BagIllustration, IsoShopFloor } from "./components/v2";
 import { MoneyStack, Hex, Chip, SealBadge, CommentInput, Phone } from "./components/v1";
+import { AgencyHeader, SeriesTitle, NumberBadge, AccentCircle, CheckerSticker, Barcode, TiledWordmark, GlossyOrb, ParticleField, OrderCard, DatabaseCylinder, Storefront, ApniDoor, FollowPill, EmblemLockup, HeaderTag } from "./components/v3";
 
 const V2Scene: React.FC<{ children: React.ReactNode }> = ({ children }) => (
   <AbsoluteFill style={{ width: W, height: H, overflow: "hidden", background: C.peach }}>
@@ -71,4 +72,80 @@ export const DemoV1: React.FC = () => (
     <SealBadge y={290} delay={55} />
     <CommentInput y={1160} delay={60} />
   </AbsoluteFill>
+);
+
+const V3Scene: React.FC<{ children: React.ReactNode; bg?: string }> = ({ children, bg = "#ECEAE7" }) => (
+  <AbsoluteFill style={{ width: W, height: H, overflow: "hidden", background: bg }}>
+    <GlobalCss />
+    {children}
+  </AbsoluteFill>
+);
+
+export const DemoV3Header: React.FC = () => (
+  <V3Scene>
+    <HeaderTag text="final · K-08" />
+    <AgencyHeader delay={5} />
+    <SeriesTitle lines={["KIRAYE", "KI DUKAAN"]} y={240} delay={10} />
+    <NumberBadge n="8" delay={15} />
+    <GlossyOrb delay={20} />
+    <AccentCircle delay={25} />
+    <CheckerSticker x={590} y={630} delay={35} />
+    <Barcode delay={40} />
+  </V3Scene>
+);
+
+export const DemoV3Profile: React.FC = () => (
+  <V3Scene>
+    <HeaderTag text="note 08" />
+    <GlossyOrb delay={5} />
+    <ParticleField />
+    <AccentCircle cx={287} cy={645} delay={10} />
+    <CheckerSticker x={590} y={630} delay={25} />
+    {/* Instagram profile phone (rotated) — simplified static frame */}
+    <Phone x={360} y={1000} w={330} h={640} delay={20} />
+  </V3Scene>
+);
+
+export const DemoV3Storefront: React.FC = () => (
+  <V3Scene bg="#E6E4E1">
+    <HeaderTag text="fig. 05" right="ref · K-08" delay={5} />
+    <Line y={280} kind="up" delay={10}><span style={{ fontFamily: FONT_SANS, fontSize: 60, fontWeight: 800, color: "#111111" }}>Dukaan kiraye ki ho,</span></Line>
+    <Storefront delay={20} />
+    <Barcode x={110} y={1218} delay={40} />
+  </V3Scene>
+);
+
+export const DemoV3Order: React.FC = () => (
+  <V3Scene bg="#000000">
+    <HeaderTag text="order" color="#FFFFFF" delay={5} />
+    <OrderCard y={550} delay={15} />
+    <DatabaseCylinder y={1000} delay={25} />
+  </V3Scene>
+);
+
+export const DemoV3Door: React.FC = () => (
+  <V3Scene bg="#E8E6E4">
+    <HeaderTag text="final · K-08" delay={5} />
+    <CheckerSticker x={627} y={80} delay={5} />
+    <Line y={205} kind="fade" delay={10}><span style={{ fontFamily: FONT_SERIF, fontStyle: "italic", fontSize: 34, color: "#555555" }}>aur ab</span></Line>
+    <Line y={295} kind="fade" delay={13}><span style={{ fontFamily: FONT_SANS, fontSize: 86, fontWeight: 900, color: "#3A3A3A", filter: "blur(2px)" }}>apni dukaan</span></Line>
+    <FollowPill y={260} delay={30} />
+    <ApniDoor delay={20} />
+    <Barcode x={166} y={1020} delay={40} />
+  </V3Scene>
+);
+
+export const DemoV3Tiled: React.FC = () => (
+  <V3Scene bg="#000000">
+    <HeaderTag text="note 08" color="#FFFFFF" delay={5} />
+    <GlossyOrb delay={5} />
+    <Line y={330} kind="fade" delay={10}><span style={{ fontFamily: FONT_SANS, fontSize: 34, color: "#8C8C8C" }}>Followers</span></Line>
+    <TiledWordmark delay={15} />
+  </V3Scene>
+);
+
+export const DemoEmblem: React.FC = () => (
+  <V3Scene bg="#000000">
+    <EmblemLockup y={640} delay={10} />
+  </V3Scene>
 );

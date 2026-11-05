@@ -55,6 +55,18 @@ no-wrap text) · `T` (positioned text) · `WordReveal` (word-by-word stagger) ·
 `MiniSite` (black phone + detailed storefront: nav, hero, products with
 prices, trust badges, testimonials, blogs — flow layout, no overlaps)
 
+### `src/components/v3.tsx` (black + crimson editorial)
+`HeaderTag` (note/fig/ref captions) · `AgencyHeader` + `SeriesTitle` (episode
+chrome) · `NumberBadge` (circled numeral) · `AccentCircle` (solid disc +
+dotted orbit) · `CheckerSticker` · `Barcode` · `TiledWordmark` (giant
+low-contrast tiled rows) · `GlossyOrb` (3D sphere accent) · `ParticleField`
+(bokeh dots) · `OrderCard` (label/value notification card) ·
+`DatabaseCylinder` (stacked discs, red seams + base glow) · `Storefront`
+("KIRAYE PE" sign, sun, pillars, roller shutter, shelves + cubes) ·
+`ApniDoor` (red circle + arch door + tilted "APNI" banner) · `FollowPill`
+("+ Follow karein" CTA sticker) · `EmblemLockup` (agency logo: arcs + spear +
+crosshair + wordmark + tagline — pass your own brand props to reuse)
+
 ### `src/components/v2.tsx` (peach + orange)
 `StepIndicator` ("01 02 03 04" + dots) · `PillBadge` (orange gradient pill) ·
 `HeadlinePair` · `BodyCopy` (small gray text block) · `SpeechBubble` (tail

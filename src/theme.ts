@@ -35,6 +35,15 @@ export const C = {
   floorCream: "#F4EBDD",
   cubeOrange: "#F78842",
   cubeCream: "#F5EFE3",
+
+  // v3 — black + crimson editorial (Kiraye ki Dukaan, Ep.08)
+  crimson: "#D0021B",
+  crimsonDark: "#A8016B",
+  warmBg: "#ECEAE7",
+  charcoalSoft: "#3A3A3A",
+  wallCrack: "#2B2B2B",
+  orbitPink: "#E8BFC4",
+  chromeSilver: "#D9D9D9",
 };
 
 export const FONT_SANS = "InterVar";
