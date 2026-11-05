@@ -1,0 +1,7 @@
+node_modules
+node_modules/
+build/
+out/
+.DS_Store
+*.png
+*.mp4

@@ -1,0 +1,22 @@
+{
+  "name": "@reel-components/motion",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Reusable Remotion component library for Hinglish agency-style reels (kinetic type, cards, phones, annotations). Extracted from alphaagency1 reference reels.",
+  "scripts": {
+    "preview": "remotion preview src/index.tsx",
+    "still": "remotion still src/index.tsx",
+    "render": "remotion render src/index.tsx"
+  },
+  "dependencies": {
+    "@remotion/cli": "^4.0.539",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "remotion": "^4.0.539"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.18",
+    "@types/react-dom": "^18.3.5",
+    "typescript": "^5.9.3"
+  }
+}
